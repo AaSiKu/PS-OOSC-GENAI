@@ -1,0 +1,34 @@
+PS Summary
+
+1) Automated Scraper
+- Input: website link
+- Output: 
+    a) json file with all contents of the website
+    b) Hyperlinks in the given website
+    c) Titles of the hyperlinks scraped in (b)
+- Key Points: There can be some edge cases (like content not being in <p>, <div> etc or any other edge case). 
+    a) Identify all these cases
+    b) Find a method to scrape data in these edge cases
+- Tools: Requests, BeautifulSoup, Scrapy.
+
+2) Question Generation
+- Input: json contents of the webpages
+- Output: 10 questions related to the content of each webpage
+        (Question: should the content only be from the main webpage or it has to be from the links under the main webpage as well???)
+- Constraints: Each question should be less than 80 characters long
+
+3) Selection of relevant links
+- Input: json contents of webpages, 10 questions
+- output: 
+    a) Metric for deciding which link is relevant to answer the questions
+    b) Filter out top 5 relevant links from the provided links
+    c) Topic of the 5 relevant links
+
+4) Evaluation Automation
+- Input: Complete Program
+- Output:
+    a) verify that each webpage has exactly 10 questions
+    b) verify that each question is under 80 characters
+    c) each entry includes 5 relevant links and topics
+    d) metric to evaluate the performance of the question generation
+    e) metric to evaluate relevance detection process
