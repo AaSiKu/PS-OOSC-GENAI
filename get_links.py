@@ -89,7 +89,5 @@ def main_get_links(start_url):
                       "content": data
                   })
       print(i)
-    save_data_to_json(dataJson, 'Url_Title_Content.json')
+    save_to_json(dataJson, 'Url_Title_Content.json')
     return dataJson
-
-main_get_links("https://www.analyticsvidhya.com/blog/2021/05/convolutional-neural-networks-cnn/")
