@@ -1,6 +1,5 @@
 import requests
 import json
-import csv
 from bs4 import BeautifulSoup
 
 def scrape_website_text(url):

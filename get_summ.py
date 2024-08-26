@@ -104,7 +104,7 @@ def text_rank(text, keys):
     dic = []
 
     for keywords in keys:
-      summary = summarize_text(text, keywords, top_n=10)
+      summary = summarize_text(text, keywords, top_n=5)
       dic.append((keywords, summary))
 
     return dic

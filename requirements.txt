@@ -5,4 +5,10 @@ nltk
 networkx
 torch
 transformers
+tqdm
+requests
+beautifulsoup4
+json
+re
+
 git+https://github.com/stanford-futuredata/ColBERT -qq
