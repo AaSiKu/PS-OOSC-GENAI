@@ -1,0 +1,8 @@
+numpy
+pandas
+scikit-learn
+nltk
+networkx
+torch
+transformers
+git+https://github.com/stanford-futuredata/ColBERT -qq
