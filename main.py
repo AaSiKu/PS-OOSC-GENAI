@@ -7,7 +7,7 @@ import get_top_5_links
 import tqdm
 
 url = input("Enter URL: ")
-article_text = get_test.scrape_website_text(url)[0]
+article_text = get_text.scrape_website_text(url)[0]
 
 #Get top 10 questions
 keys = get_summ.extract_keywords(article_text)
