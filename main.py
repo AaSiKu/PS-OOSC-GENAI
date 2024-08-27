@@ -13,14 +13,17 @@ article_text = get_text.scrape_website_text(url)[0]
 keys = get_summ.extract_keywords(article_text)
 topics_summary_tuple_list = get_summ.text_rank(article_text, keys)
 ques_lis = get_ques.getQuestions(topics_summary_tuple_list)
+print("________________________________________")
+print(ques_lis)
+print("________________________________________")
 temp = [i[1] for i in topics_summary_tuple_list]
 main_summary_list = [' '.join(j) for j in temp]
 FinalQuesLis = get_best_ques.get_top_10(ques_lis,main_summary_list)
 
 #Get Links
-scraped_data = get_links.main_get_links(url)        # [ {'url': url, 'title': title, 'content': content} ....]
+get_links.main_get_links(url)        # [ {'url': url, 'title': title, 'content': content} ....]
 
-links_list = get_top_5_links.top_5_main()
+links_list = get_top_5_links.top_5_main(FinalQuesLis)
 
 final_info_dic = dict()
 final_info_dic["url"] = url
@@ -28,4 +31,4 @@ final_info_dic["questions"] = FinalQuesLis
 final_info_dic["relevant_links"] = links_list
 dataJson = [final_info_dic]
 
-save_data_to_json(dataJson, 'output.json')
+get_links.save_to_json(dataJson, 'output.json')

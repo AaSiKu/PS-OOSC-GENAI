@@ -40,9 +40,6 @@ def crawl(start_url, max_depth=1, output_format="json"):
                 for link in links:
                     if link not in visited:
                         queue.append((link, depth + 1))
-
-    # Save all collected links
-    save_to_json(all_links, "links_and_content.json")
     
     return set(all_links)
 
@@ -69,7 +66,9 @@ def scrape_website_text(url):
         # Clean up the text by removing extra whitespace
         cleaned_text = '\n'.join([line.strip() for line in text.splitlines() if line.strip()])
 
-        return (cleaned_text,title_tag.get_text(strip=True))
+        if title_tag is not None:
+            return (cleaned_text,title_tag.get_text(strip=True))
+        return (cleaned_text, None)
     else:
         return None,None
 
