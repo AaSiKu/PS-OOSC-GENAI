@@ -44,7 +44,7 @@ def extract_keywords(article_text):
             lis.append([feature_names[i] for i in topic.argsort()[:-num_top_words - 1:-1]])
         return lis
 
-    keys = display_topics(H, feature_namessumm, num_top_words=10)
+    keys = display_topics(H, feature_names, num_top_words=10)
     return keys
 
 # Preprocessing text: tokenize and clean sentences

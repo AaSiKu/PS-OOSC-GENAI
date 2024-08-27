@@ -1,14 +1,13 @@
 numpy
 pandas
 scikit-learn
-nltk
+nltk==3.8.1
 networkx
 torch
 transformers
 tqdm
 requests
 beautifulsoup4
-json
-re
+sentencepiece
 
 git+https://github.com/stanford-futuredata/ColBERT -qq
